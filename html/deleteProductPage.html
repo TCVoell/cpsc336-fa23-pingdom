@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+</head>
+<body>
+    <h1>Delete Product</h1>
+    <form action="deleteProduct.php" method="post" autocomplete="off">
+        Barcode: <input type="text" name="barcode" pattern="[0-9]{12}" title="Barcode must be exactly 12 digits" required><br>
+        <input type="submit" value="Delete Product">
+    </form>
+    <a href="menu.html">Back to Menu</a>
+</body>
+</html>
+
