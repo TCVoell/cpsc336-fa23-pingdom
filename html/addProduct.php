@@ -17,7 +17,11 @@ $checkQuery = "SELECT * FROM Inventory WHERE barcode = '$barcode'";
 $result = $db->query($checkQuery);
 
 if ($result->num_rows > 0) {
-    echo 'Error adding product: Barcode already exists.';
+    echo '<html><body>';
+    echo '<p>Error adding product: Barcode already exists.</p>';
+    echo '<button onclick="goBack()">Go Back</button>';
+    echo '<script>function goBack() {window.location.href = "menu.html";}</script>';
+    echo '</body></html>';
 } else {
     // Use prepared statement to insert data
     $stmt = $db->prepare("INSERT INTO Inventory (barcode, name, quantity) VALUES (?, ?, ?)");
@@ -41,3 +45,4 @@ if ($result->num_rows > 0) {
 // Close the database connection
 $db->close();
 ?>
+
