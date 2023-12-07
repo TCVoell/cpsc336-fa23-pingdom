@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
     // Execute the statement
     if ($stmt->execute()) {
         echo 'Product added successfully.';
-	        
+
         // Redirect to index.html
         header('Location: menu.html');
         exit();
@@ -41,4 +41,3 @@ if ($result->num_rows > 0) {
 // Close the database connection
 $db->close();
 ?>
-
